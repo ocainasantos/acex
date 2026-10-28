@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>Staff — dados exatos para o produtor rural e o agrônomo</title>
+  <meta name="description" content="O Staff é um projeto de extensão que aproxima produtores rurais e agrônomos de informações claras sobre solo, clima e lavoura, com dados abertos da Open-Meteo e a localização sempre visível.">
+  <meta name="theme-color" content="#0C2A18">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Staff — dados exatos para o produtor rural e o agrônomo">
+  <meta property="og:description" content="Projeto de extensão (ACEX) com dados abertos de clima e solo da Open-Meteo para a localização consultada — com a origem sempre visível.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="#topo">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4.2 3-7 7-7 0 4.1-3 7-7 7Z"/><path d="M12 15c0-3.4-2.5-5.6-5.7-5.6 0 3.3 2.5 5.6 5.7 5.6Z"/></svg>
+        </span>
+        <span class="brand-text"><strong>Staff</strong><small>Projeto de Extensão · ACEX</small></span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Navegação principal">
+        <a href="#projeto">O projeto</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#experiencia">Dados ao vivo</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="badge"><span class="badge-dot" aria-hidden="true"></span>Projeto de Extensão · Unipar Toledo 2026</p>
+          <h1 id="hero-title">Dados exatos no campo, <span class="destaque">decisões melhores</span> na lavoura.</h1>
+          <p class="hero-lead">
+            O Staff aproxima produtores rurais e agrônomos de uma leitura simples e confiável sobre solo, clima e lavoura.
+            Este site apresenta a iniciativa e já entrega uma prévia real: dados abertos da Open-Meteo para a localização
+            indicada, com a origem sempre à vista.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#projeto">Conhecer o projeto</a>
+            <a class="btn btn--ghost" href="#experiencia">
+              Ver a experiência
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+            </a>
+          </div>
+
+          <ul class="hero-facts">
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+              Dados da API pública Open-Meteo
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+              Localização e coordenadas sempre visíveis
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+              Acesso pelo navegador, sem instalação
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <article class="sensor-card">
+            <header class="sensor-head">
+              <span class="sensor-tag" id="hero-local">Toledo – PR</span>
+              <span class="sensor-live"><span class="pulse"></span>ao vivo</span>
+            </header>
+            <p class="sensor-value"><span class="sensor-number" id="hero-soil">—</span><span class="unit">%</span></p>
+            <p class="sensor-label">umidade do solo · 0–27 cm</p>
+            <div class="spark-bars" id="hero-bars" aria-hidden="true"></div>
+            <p class="spark-caption">chance de chuva · próximos 7 dias</p>
+            <ul class="sensor-metrics">
+              <li><strong id="hero-rain">—</strong><span>chuva · 7 dias</span></li>
+              <li><strong id="hero-soiltemp">—</strong><span>solo a 6 cm</span></li>
+            </ul>
+            <a class="sensor-source" href="#experiencia">Fonte: Open-Meteo · <span id="hero-coords">—</span></a>
+          </article>
+          <p class="chip chip--one" id="chip-updated">Consultando…</p>
+          <p class="chip chip--two" id="chip-condition">Open-Meteo</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projeto" aria-labelledby="projeto-title">
+      <div class="container split">
+        <div class="section-head reveal">
+          <p class="eyebrow">O projeto</p>
+          <h2 id="projeto-title">Tecnologia que fala a língua de quem vive do campo.</h2>
+        </div>
+        <div class="split-body reveal">
+          <p>
+            O Staff nasceu da continuidade de um primeiro projeto do grupo e de uma constatação simples: sobra informação
+            no campo, mas falta clareza para transformá-la em decisão. Sensores, previsões e histórico de produtividade
+            costumam chegar espalhados, em linguagens diferentes e longe de quem realmente precisa deles.
+          </p>
+          <p>
+            A proposta é reunir esses dados em uma leitura única, direta e compreensível — sem planilhas complexas e sem
+            depender de conhecimento técnico avançado. Este site é a porta de entrada do projeto: explica o que é o Staff,
+            para quem ele existe e como será a experiência de uso do programa.
+          </p>
+          <ul class="pill-list">
+            <li>Site informativo</li><li>Público externo</li><li>HTML e CSS</li><li>Dados abertos</li><li>Extensão II</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="como-funciona" aria-labelledby="como-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="como-title">Três passos para entender o Staff.</h2>
+          <p class="lead">A primeira entrega foi organizada em etapas curtas, do entendimento do problema ao contato com o usuário.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-number">01</span>
+            <h3>Entenda o problema</h3>
+            <p>Uma leitura rápida do que é o Staff e de qual necessidade real do campo ele atende: dados exatos para decidir melhor.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">02</span>
+            <h3>Veja como vai funcionar</h3>
+            <p>O painel reúne dados reais de solo e clima da localização escolhida, consultados direto na API pública Open-Meteo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">03</span>
+            <h3>Acompanhe a evolução</h3>
+            <p>O site é o ponto de partida. A partir dele, novas funcionalidades e o acesso ao programa serão apresentados.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="objetivos" aria-labelledby="objetivos-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Objetivos</p>
+          <h2 id="objetivos-title">O que queremos alcançar com o Staff.</h2>
+          <p class="lead">Quatro frentes guiam o projeto — da produtividade no dia a dia à formação de quem participa.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 4-6 5 5"/><path d="M3 21h18"/></svg></span>
+            <h3>Dados exatos, mais produtividade</h3>
+            <p>Facilitar o acesso do produtor e do agrônomo a informações precisas, para que a decisão no campo deixe de ser estimativa.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></span>
+            <h3>Avanço na obtenção de dados</h3>
+            <p>Evoluir a forma como as informações chegam do campo, tornando a coleta mais próxima da realidade da propriedade.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>
+            <h3>Conhecimento em tratamento de dados</h3>
+            <p>Desenvolver repertório para organizar, limpar e interpretar dados — habilidade que vale para o projeto e para a formação do grupo.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16.5 12.5a3 3 0 1 0-1.6-5.5"/><path d="M17 20a5.5 5.5 0 0 0-2-4.3"/></svg></span>
+            <h3>Conexão de áreas e pessoas</h3>
+            <p>Aproximar tecnologia, agronomia e quem está na lida diária — porque dado sem contexto não vira decisão.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="para-quem" aria-labelledby="paraquem-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Para quem</p>
+          <h2 id="paraquem-title">Feito para quem decide no campo.</h2>
+        </div>
+        <div class="audiences">
+          <article class="audience reveal">
+            <p class="audience-tag">Produtor rural</p>
+            <h3>Menos achismo, mais resposta.</h3>
+            <p>Saber o que está acontecendo na lavoura antes de agir — com informação organizada e linguagem acessível.</p>
+            <ul class="check-list">
+              <li>Leitura clara dos indicadores da área</li>
+              <li>Acompanhamento da safra em um só lugar</li>
+              <li>Apoio para decidir quando e como agir</li>
+            </ul>
+          </article>
+          <article class="audience reveal">
+            <p class="audience-tag">Agrônomo</p>
+            <h3>Contexto pronto para recomendar.</h3>
+            <p>Dados reunidos e comparáveis, que sustentam a recomendação técnica com mais segurança e menos retrabalho.</p>
+            <ul class="check-list">
+              <li>Histórico e indicadores da propriedade</li>
+              <li>Comparação entre talhões e safras</li>
+              <li>Base comum para conversar com o produtor</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Dados ao vivo</p>
+          <h2 id="exp-title">Clima e solo da região, com a origem à vista.</h2>
+          <p class="lead">
+            Nada de número fictício: o painel consulta a API pública Open-Meteo com as coordenadas da localização selecionada.
+            Chuva, temperatura e umidade do solo vêm do modelo e são atualizadas automaticamente.
+          </p>
+        </div>
+
+        <div class="live-grid">
+          <aside class="source-card reveal" aria-labelledby="local-nome">
+            <p class="source-eyebrow">Localização dos dados</p>
+            <h3 id="local-nome">Toledo – PR, Brasil</h3>
+            <dl class="source-grid">
+              <div><dt>Coordenadas</dt><dd id="local-coords">—</dd></div>
+              <div><dt>Fuso horário</dt><dd id="local-tz">—</dd></div>
+              <div><dt>Fonte</dt><dd><a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo ↗</a></dd></div>
+              <div><dt>Última leitura</dt><dd id="local-updated">—</dd></div>
+            </dl>
+            <a class="map-link" id="local-map" href="https://www.openstreetmap.org/" target="_blank" rel="noopener">Ver a localização no mapa ↗</a>
+
+            <form class="loc-form" id="loc-form" role="search">
+              <label for="loc-input">Consultar outra cidade</label>
+              <div class="loc-controls">
+                <input id="loc-input" name="cidade" type="search" placeholder="Ex.: Cascavel" autocomplete="off" spellcheck="false">
+                <button class="btn btn--primary btn--sm" type="submit">Buscar</button>
+              </div>
+            </form>
+            <ul class="loc-results" id="loc-results" hidden></ul>
+            <div class="loc-actions">
+              <button class="btn btn--ghost btn--sm" type="button" id="loc-gps">Usar minha localização</button>
+              <button class="btn btn--ghost btn--sm" type="button" id="loc-refresh">Atualizar</button>
+            </div>
+            <p class="loc-status" id="loc-status" role="status" aria-live="polite">Carregando dados de Toledo – PR…</p>
+            <noscript><p class="loc-status">Os dados ao vivo são carregados com JavaScript. Ative o JavaScript para consultar a Open-Meteo.</p></noscript>
+          </aside>
+
+          <figure class="browser reveal" id="live-panel">
+            <div class="browser-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <em>Open-Meteo · dados abertos</em>
+            </div>
+            <div class="browser-body">
+              <div class="app-head">
+                <div><p class="app-kicker" id="panel-coords">—</p><p class="app-title" id="panel-local">Toledo – PR, Brasil</p></div>
+                <span class="app-badge" id="panel-condition">consultando…</span>
+              </div>
+              <div class="app-tiles">
+                <div class="tile"><span>Umidade do solo</span><strong id="panel-soil">—</strong><small>0–27 cm</small></div>
+                <div class="tile"><span>Chuva · 7 dias</span><strong id="panel-rain">—</strong><small>acumulado previsto</small></div>
+                <div class="tile"><span>Solo a 6 cm</span><strong id="panel-soiltemp">—</strong><small>temperatura</small></div>
+              </div>
+              <div class="app-chart" id="panel-chart" role="img" aria-label="Chuva prevista por dia: carregando">
+                <div class="app-chart-head"><span>Chuva prevista por dia</span><small>mm</small></div>
+                <div class="bars bars--labeled" id="panel-bars" aria-hidden="true"></div>
+              </div>
+              <p class="app-alert" id="panel-alert">
+                <span class="alert-dot" aria-hidden="true"></span>
+                <span id="panel-alert-text">Consultando a API Open-Meteo…</span>
+              </p>
+            </div>
+            <figcaption id="panel-caption">Fonte: Open-Meteo. Os valores são consultados no navegador a cada visita — sem dados de exemplo.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Números do projeto">
+      <div class="container stats-inner">
+        <div class="stat reveal"><strong>03</strong><span>etapas no projeto</span></div>
+        <div class="stat reveal"><strong>07</strong><span>dias de previsão</span></div>
+        <div class="stat reveal"><strong>02</strong><span>usuários testaram o site</span></div>
+        <div class="stat reveal"><strong>04</strong><span>pessoas alcançadas na primeira entrega</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <p class="eyebrow eyebrow--light">Projeto de extensão</p>
+            <h2 id="cta-title">Dado bom é dado que chega em quem decide.</h2>
+            <p class="cta-text">O Staff é uma iniciativa acadêmica com aplicação real: tecnologia simples, pensada para o dia a dia do campo.</p>
+          </div>
+          <a class="btn btn--light" href="#experiencia">Ver os dados ao vivo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#topo">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4.2 3-7 7-7 0 4.1-3 7-7 7Z"/><path d="M12 15c0-3.4-2.5-5.6-5.7-5.6 0 3.3 2.5 5.6 5.7 5.6Z"/></svg>
+          </span>
+          <span class="brand-text"><strong>Staff</strong><small>Projeto de Extensão · ACEX</small></span>
+        </a>
+        <p class="footer-text">Atividade Curricular de Extensão — Análise e Desenvolvimento de Sistemas. Unipar Toledo, 2026.</p>
+        <p class="footer-credit">Dados meteorológicos e de solo: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0).</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <a href="#projeto">O projeto</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#experiencia">Dados ao vivo</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="ano">2026</span> Projeto Staff. Conteúdo de caráter acadêmico.</p>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
